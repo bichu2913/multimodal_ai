@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Conda
+*.conda
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated audio/video
+*.mp3
+*.wav
+*.mp4
+
+# Whisper/cache
+.cache/
+

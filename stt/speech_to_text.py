@@ -1,16 +1,19 @@
 import whisper
 
 
+print("Loading Whisper model...")
+model = whisper.load_model("base")
+
+
 def transcribe_audio(audio_path):
-    print("Loading Whisper model...")
-
-    model = whisper.load_model("base")
-
     print("Transcribing audio...")
 
-    result = model.transcribe(audio_path)
+    result = model.transcribe(
+        audio_path,
+        fp16=False
+    )
 
-    return result["text"]
+    return result["text"].strip()
 
 
 if __name__ == "__main__":
